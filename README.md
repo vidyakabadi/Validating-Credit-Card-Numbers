@@ -11,7 +11,8 @@ A valid credit card from ABCD Bank has the following characteristics:
 ► It must NOT use any other separator like ' ' , '_', etc.
 ► It must NOT have  or more consecutive repeated digits.
 
-Examples:Valid Credit Card Numbers
+Examples:
+Valid Credit Card Numbers
 
 4253625879615786
 4424424424442444
@@ -54,18 +55,16 @@ Invalid
 Valid
 Invalid
 Invalid
-Explanation
 
+Explanation
 4123456789123456 : Valid
 5123-4567-8912-3456 : Valid
 61234--8912-3456 : Invalid, because the card number is not divided into equal groups of .
 4123356789123456 : Valid
 51-67-8912-3456 : Invalid, consecutive digits  is repeating  times.
 5123456789123456 : Invalid, because space '  ' and - are used as separators.
-
-#code
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 import re
-
 n = int(input())
 inputs = list()
 for _  in range(n):
