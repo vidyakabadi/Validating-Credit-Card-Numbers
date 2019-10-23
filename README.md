@@ -64,21 +64,22 @@ Explanation
 51-67-8912-3456 : Invalid, consecutive digits  is repeating  times.
 5123456789123456 : Invalid, because space '  ' and - are used as separators.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 import re
+
 n = int(input())
 inputs = list()
 for _  in range(n):
-	inputs.append(input())
+    inputs.append(input())
 
 for inp in inputs:
-	valid = re.findall("[4-6][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9]",inp)
-	if valid == [] or len(inp) > 19:
-		print("Invalid")
-	else:
-		temp_valid = ''.join(valid[0].split('-'))
-		valid = re.findall(r"(\d)\1{3}",temp_valid)
-		if valid:
-			print("Invalid")
-		else:
-			print("Valid")
-
+    valid = re.findall("[4-6][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9]",inp)
+    if valid == [] or len(inp) > 19:
+        print("Invalid")
+    else:
+        temp_valid = ''.join(valid[0].split('-'))
+        valid = re.findall(r"(\d)\1{3}",temp_valid)
+        if valid:
+            print("Invalid")
+        else:
+            print("Valid")
