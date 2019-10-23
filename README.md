@@ -2,9 +2,12 @@
 import re
 
 n = int(input())
+
 inputs = list()
+
 for _  in range(n):
     inputs.append(input())
+    
 
 for inp in inputs:
     valid = re.findall("[4-6][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9]",inp)
