@@ -2,6 +2,7 @@
 import re
 
 n = int(input())
+
 inputs = list()
 for _  in range(n):
 	inputs.append(input())
