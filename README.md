@@ -11,6 +11,7 @@ for _  in range(n):
 
 for inp in inputs:
 	valid = re.findall("[4-6][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9][-]*[0-9][0-9][0-9][0-9]",inp)
+	
 	if valid == [] or len(inp) > 19:
 		print("Invalid")
 	else:
